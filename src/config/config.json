@@ -1,10 +1,13 @@
 {
   "development": {
-    "username": "admin",
-    "password": "1234",
-    "database": "arus",
-    "host": "127.0.0.1",
+    "username": "fuktvoxwbgdtvk",
+    "password": "cf561a26d804734ab8eb417a2f5ad2259122d1067d2bc60bdd4629ccaf2eda2e",
+    "database": "dcop0tncj0pceb",
+    "host": "ec2-174-129-255-69.compute-1.amazonaws.com",
     "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": true
+    },
     "operatorsAliases": false
   },
   "test": {

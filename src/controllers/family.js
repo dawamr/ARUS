@@ -34,10 +34,21 @@ module.exports = {
 
     familyModel
       .findAndCountAll({
-        attributes: ["id", "name", "nik", "user_id", "createdAt", "updatedAt"],
+        attributes: [
+          "id",
+          "name",
+          "nik",
+          "age",
+          "user_id",
+          "createdAt",
+          "updatedAt"
+        ],
         where: {
           user_id: req.params.id
-        }
+        },
+        order: [[orderBy, sortBy]],
+        limit: perPageResult,
+        offset: offsetResult
       })
       .then(result => {
         let totalPage = Math.ceil(result.count / perPage);
@@ -61,8 +72,9 @@ module.exports = {
         attributes: [
           "id",
           "name",
-          "user_id",
           "nik",
+          "user_id",
+          "age",
           "gender",
           "dateOfBirth",
           "placeOfBirth",
@@ -132,6 +144,7 @@ module.exports = {
           "name",
           "user_id",
           "nik",
+          "age",
           "gender",
           "dateOfBirth",
           "placeOfBirth",
