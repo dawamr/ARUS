@@ -22,7 +22,7 @@ app.use(
   })
 );
 
-// app.use(cors());
+app.use(cors());
 
 app.use(apiEndpoint(express));
 
